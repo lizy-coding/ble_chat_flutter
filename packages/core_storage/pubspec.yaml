@@ -1,0 +1,9 @@
+name: core_storage
+description: Persistent storage helpers for the BLE IM app
+publish_to: none
+version: 0.1.0
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+dependencies:
+  core_domain:
+    path: ../core_domain
