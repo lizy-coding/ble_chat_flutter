@@ -1,9 +1,7 @@
-library core_storage;
-
 import 'dart:async';
 import 'dart:collection';
 
-import 'package:core_domain/core_domain.dart';
+import 'package:monorepo/src/core/domain/core_domain.dart';
 
 class Storage {
   Storage._();
