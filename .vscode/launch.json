@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "monorepo",
+            "name": "ble_chat_flutter",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "monorepo (profile mode)",
+            "name": "ble_chat_flutter (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "monorepo (release mode)",
+            "name": "ble_chat_flutter (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

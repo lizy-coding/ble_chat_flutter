@@ -54,7 +54,7 @@ class _DevicesPageState extends ConsumerState<DevicesPage> {
     final conversations = conversationsAsync.value ?? const <ConversationDto>[];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('BLE 璁惧')),
+      appBar: AppBar(title: const Text('BLE devices')),
       body: ListView(
         children: [
           if (conversationsAsync.isLoading)
@@ -65,7 +65,7 @@ class _DevicesPageState extends ConsumerState<DevicesPage> {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
-                '鍔犺浇浼氳瘽澶辫触锛?{conversationsAsync.error}',
+                'Error: ${conversationsAsync.error}',
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.red),
               ),
             ),
@@ -73,7 +73,7 @@ class _DevicesPageState extends ConsumerState<DevicesPage> {
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
               child: Text(
-                '鏈€杩戜細璇?',
+                'Conversations',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
@@ -81,7 +81,7 @@ class _DevicesPageState extends ConsumerState<DevicesPage> {
             ListTile(
               title: Text(conversation.title ?? conversation.peerId),
               subtitle: Text(
-                '涓婃鏇存柊锛?{_formatTimestamp(conversation.updatedAt)}',
+                'Last updated: ${_formatTimestamp(conversation.updatedAt)}',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -101,14 +101,14 @@ class _DevicesPageState extends ConsumerState<DevicesPage> {
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
             child: Text(
-              '鎵弿鍒扮殑璁惧',
+              'Devices',
               style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
           if (_devices.isEmpty)
             const ListTile(
-              title: Text('鏆傛棤璁惧'),
-              subtitle: Text('姝ｅ湪鎵弿闄勮繎鐨勮摑鐗欒澶?..'),
+              title: Text('No devices found'),
+              subtitle: Text('No devices found. Please scan for devices.'),
             ),
           for (final deviceId in _devices)
             ListTile(
