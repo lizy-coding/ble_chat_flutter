@@ -1,12 +1,16 @@
-name: core_domain
-description: Domain DTOs and serializers for the BLE IM app.
+name: core_foreground
+description: Foreground service helpers for the BLE IM app.
 publish_to: 'none'
 version: 0.1.0
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.22.0 <4.0.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
+  flutter_foreground_task: ^6.1.2
   json_annotation: ^4.9.0
 
 dev_dependencies:
