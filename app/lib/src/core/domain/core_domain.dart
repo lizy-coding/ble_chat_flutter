@@ -7,4 +7,5 @@ export 'models/conversation_dto.dart';
 export 'models/exceptions.dart';
 export 'models/message_dto.dart';
 export 'models/user_dto.dart';
+export 'models/local_user.dart';
 

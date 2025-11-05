@@ -9,7 +9,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Storage.init();
   await Notifications.init();
-  await Foreground.ensureStarted(); // Android 鍓嶅彴
+  await Foreground.ensureStarted(); // Android 
   runApp(const MyApp());
 }
 

@@ -43,6 +43,20 @@ class AppLocalizations {
       'noDevicesTitle': 'No devices found',
       'noDevicesSubtitle': 'No devices found. Please scan for devices.',
       'errorLabel': 'Error: {message}',
+      'loginTitle': 'Welcome back',
+      'loginSubtitle': 'Log in with your username or phone number',
+      'loginIdentifierLabel': 'Username or phone',
+      'loginIdentifierHint': 'e.g. demo_user / 13800138000',
+      'loginIdentifierRequired': 'Username or phone is required',
+      'loginPasswordLabel': 'Password',
+      'loginPasswordHint': 'Enter your password',
+      'loginPasswordRequired': 'Password is required',
+      'loginPasswordLengthRule': 'Password must be at least 6 characters',
+      'loginAgreementLabel': 'I have read and agree to the User Agreement',
+      'loginAgreementRequired': 'You must accept the User Agreement before continuing',
+      'loginInvalidCredentials': 'Incorrect username/phone or password',
+      'loginButtonLabel': 'Log in',
+      'logoutTooltip': 'Log out',
     },
     'zh': <String, String>{
       'appTitle': 'BLE 聊天',
@@ -57,6 +71,20 @@ class AppLocalizations {
       'noDevicesTitle': '未发现设备',
       'noDevicesSubtitle': '未发现设备，请尝试重新扫描。',
       'errorLabel': '错误：{message}',
+      'loginTitle': '欢迎回来',
+      'loginSubtitle': '使用用户名或手机号登录',
+      'loginIdentifierLabel': '用户名或手机号',
+      'loginIdentifierHint': '例如 demo_user / 13800138000',
+      'loginIdentifierRequired': '请输入用户名或手机号',
+      'loginPasswordLabel': '密码',
+      'loginPasswordHint': '请输入密码',
+      'loginPasswordRequired': '请输入密码',
+      'loginPasswordLengthRule': '密码长度至少 6 位',
+      'loginAgreementLabel': '我已阅读并同意《用户协议》',
+      'loginAgreementRequired': '请先阅读并勾选用户协议',
+      'loginInvalidCredentials': '账号或密码错误',
+      'loginButtonLabel': '登录',
+      'logoutTooltip': '退出登录',
     },
   };
 
@@ -79,6 +107,20 @@ class AppLocalizations {
   String get noDevicesTitle => _resolve('noDevicesTitle');
   String get noDevicesSubtitle => _resolve('noDevicesSubtitle');
   String errorLabel(String message) => _resolve('errorLabel').replaceFirst('{message}', message);
+  String get loginTitle => _resolve('loginTitle');
+  String get loginSubtitle => _resolve('loginSubtitle');
+  String get loginIdentifierLabel => _resolve('loginIdentifierLabel');
+  String get loginIdentifierHint => _resolve('loginIdentifierHint');
+  String get loginIdentifierRequired => _resolve('loginIdentifierRequired');
+  String get loginPasswordLabel => _resolve('loginPasswordLabel');
+  String get loginPasswordHint => _resolve('loginPasswordHint');
+  String get loginPasswordRequired => _resolve('loginPasswordRequired');
+  String get loginPasswordLengthRule => _resolve('loginPasswordLengthRule');
+  String get loginAgreementLabel => _resolve('loginAgreementLabel');
+  String get loginAgreementRequired => _resolve('loginAgreementRequired');
+  String get loginInvalidCredentials => _resolve('loginInvalidCredentials');
+  String get loginButtonLabel => _resolve('loginButtonLabel');
+  String get logoutTooltip => _resolve('logoutTooltip');
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

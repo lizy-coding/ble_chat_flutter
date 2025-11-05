@@ -1,4 +1,5 @@
-﻿import 'package:ble_chat_flutter/src/core/ble/core_ble.dart';
+﻿import 'package:ble_chat_flutter/src/core/auth/auth_controller.dart';
+import 'package:ble_chat_flutter/src/core/ble/core_ble.dart';
 import 'package:ble_chat_flutter/src/core/domain/core_domain.dart';
 import 'package:ble_chat_flutter/src/core/localization/localization.dart';
 import 'package:ble_chat_flutter/src/core/storage/storage.dart';
@@ -55,7 +56,20 @@ class _DevicesPageState extends ConsumerState<DevicesPage> {
     final conversations = conversationsAsync.value ?? const <ConversationDto>[];
 
     return Scaffold(
-      appBar: AppBar(title: Text(context.l10n.bleDevicesTitle)),
+      appBar: AppBar(
+        title: Text(context.l10n.bleDevicesTitle),
+        actions: [
+          IconButton(
+            tooltip: context.l10n.logoutTooltip,
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              ref.read(authControllerProvider).logout();
+              if (!mounted) return;
+              context.go('/login');
+            },
+          ),
+        ],
+      ),
       body: ListView(
         children: [
           if (conversationsAsync.isLoading)
