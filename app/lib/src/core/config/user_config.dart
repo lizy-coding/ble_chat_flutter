@@ -13,7 +13,7 @@ class UserConfig {
     LocalUser(
       username: 'codex_admin',
       phoneNumber: '15500001111',
-      password: 'Admin#2024',
+      password: 'admin',
     ),
   ];
 }

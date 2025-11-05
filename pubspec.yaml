@@ -1,5 +1,5 @@
 name: ble_chat_flutter_workspace
-description: Workspace-level tooling and scripts for the Melos-managed monorepo.
+description: Workspace-level tooling and scripts for the Melos-managed ble_chat_flutter.
 publish_to: "none"
 
 environment:

@@ -1,4 +1,4 @@
-# Melos Monorepo Guide
+# Melos ble_chat_flutter Guide
 
 ## 准备 Melos 3+
 根目录的 `pubspec.yaml` 已声明 `melos` 依赖，首次拉取或版本更新后运行：

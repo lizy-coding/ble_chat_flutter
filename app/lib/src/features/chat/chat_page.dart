@@ -5,6 +5,7 @@ import 'package:ble_chat_flutter/src/core/notifications/notifications.dart';
 import 'package:ble_chat_flutter/src/core/storage/storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class ChatPage extends ConsumerStatefulWidget {
   const ChatPage({super.key, required this.peerId});
@@ -86,7 +87,14 @@ class _ChatPageState extends ConsumerState<ChatPage> {
   Widget build(BuildContext context) {
     final messagesAsync = ref.watch(messagesProvider(widget.peerId));
     return Scaffold(
-      appBar: AppBar(title: Text(context.l10n.chatWithPeer(widget.peerId))),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          tooltip: context.l10n.bleDevicesTitle,
+          onPressed: () => context.go('/devices'),
+        ),
+        title: Text(context.l10n.chatWithPeer(widget.peerId)),
+      ),
       body: Column(
         children: [
           Expanded(

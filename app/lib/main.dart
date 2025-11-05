@@ -1,5 +1,6 @@
 ﻿import 'package:ble_chat_flutter/src/core/storage/storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:ble_chat_flutter/src/app/app.dart';
 import 'package:ble_chat_flutter/src/core/foreground/foreground.dart';
@@ -9,7 +10,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Storage.init();
   await Notifications.init();
-  await Foreground.ensureStarted(); // Android 
-  runApp(const MyApp());
+  await Foreground.ensureStarted(); // Android
+  runApp(const ProviderScope(child: MyApp()));
 }
 
